@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #000;
+  background-color: #e0f7fa;
   color: #fff;
   line-height: 1.6;
 }
@@ -28,7 +28,8 @@ header>div{
   padding: 0px;
   flex-wrap: wrap;
   text-align: center;
-  gap: 2vw;
+  gap: 1.5rem;
+  box-sizing: border-box;
 }
 
 /* .logo {
@@ -46,6 +47,12 @@ header>div{
   text-decoration: none;
   position: relative; 
   font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.nav a:hover {
+  background-color: #e63946;
 }
 
 .index_img img {
@@ -57,6 +64,7 @@ header>div{
 .index_msg>p{
   padding: 2vw 5vw 2vw 5vw;
   background-color: #ffffff;
+  font-size: 1rem;
   color: #000;
   font-family: 'Montserrat', sans-serif;
 }
@@ -68,17 +76,19 @@ header>div{
   justify-content: center;
   text-align: center;
   padding: 100px 20px;
-  background-color:rgb(129, 215, 217);
+  background-color:#e0f7fa;
   background-repeat:no-repeat; 
 }
 
 .hero h1 {
+  color: #e63946;
   font-size: 2.5rem;
   margin-bottom: 20px;
   max-width: 800px;
 }
 
 .hero p {
+  color: black;
   font-size: 1.2rem;
   max-width: 700px;
 }
@@ -103,6 +113,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
   .hero h1 {
     font-size: 2rem;
   }
@@ -120,5 +131,24 @@ footer {
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
+  }
+}
+@media(max-width: 1105px){
+  /* Hide all logos first */
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .logo>img {
+    display: none;
+  }
+
+  /* Show only NSS, YAS, and NSUT logos */
+  .NSS-Logo,.yas-Logo,.NSUT-Logo {
+    display: inline-block !important;
+    width: auto;
   }
 }
