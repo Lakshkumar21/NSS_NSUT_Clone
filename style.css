@@ -138,7 +138,9 @@ footer {
   .logo {
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
     align-items: center;
+    padding: 0 10px;
     flex-wrap: nowrap;
   }
 
@@ -149,6 +151,9 @@ footer {
   /* Show only NSS, YAS, and NSUT logos */
   .NSS-Logo,.yas-Logo,.NSUT-Logo {
     display: inline-block !important;
+    height: auto;
     width: auto;
+    vertical-align: middle;
+    max-width: 30%;
   }
 }
